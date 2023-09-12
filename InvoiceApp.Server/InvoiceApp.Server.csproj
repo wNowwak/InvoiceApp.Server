@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoFixture" Version="4.18.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
@@ -18,17 +19,35 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Repositories\MSSql\Queries\Address\AddressQueries.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AddressQueries.resx</DependentUpon>
+    </Compile>
     <Compile Update="Repositories\MSSql\Queries\DocumentType\DocumentTypeQueries.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>DocumentTypeQueries.resx</DependentUpon>
     </Compile>
+    <Compile Update="Repositories\MSSql\Queries\MeasureUnit\MeasureUnitQueries.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MeasureUnitQueries.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Repositories\MSSql\Queries\Address\AddressQueries.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddressQueries.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Repositories\MSSql\Queries\DocumentType\DocumentTypeQueries.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DocumentTypeQueries.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Repositories\MSSql\Queries\MeasureUnit\MeasureUnitQueries.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MeasureUnitQueries.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

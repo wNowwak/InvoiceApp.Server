@@ -1,13 +1,12 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 
 namespace InvoiceApp.Server.Repositories.MSSql;
 
 public abstract class MSSQLBaseRepository
 {
     private SqlConnection _sqlConnection = default!;
-
+    private string _connectionString = string.Empty;
     public MSSQLBaseRepository()
     {
         _sqlConnection = new SqlConnection();
@@ -15,13 +14,16 @@ public abstract class MSSQLBaseRepository
         connectionStringBuilder.DataSource = @"PIEC\DEVSERVER";
         connectionStringBuilder.InitialCatalog = "masterThesis";
         connectionStringBuilder.IntegratedSecurity = true;
-        _sqlConnection.ConnectionString = connectionStringBuilder.ConnectionString;
+        _connectionString = connectionStringBuilder.ConnectionString;
     }
 
     protected SqlConnection GetSqlConnection()
     {
         if (_sqlConnection.State == ConnectionState.Closed)
+        {
+            _sqlConnection.ConnectionString = _connectionString;
             _sqlConnection.Open();
+        }
         return _sqlConnection;
     }
 

@@ -118,18 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Create" xml:space="preserve">
-    <value>INSERT INTO DocumentTypes (Name, Shortcut) VALUES (@NAME, @SHORTCUT)</value>
+    <value>INSERT INTO Addresses (City, Country, Street, Number, FlatNumber, PostCode)
+	VALUES (@CITY, @COUNTRY, @STREET, @NUMBER, @FLATNUMBER, @POSTCODE)</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>DELETE FROM DocumentTypes WHERE TypeId = @TYPEID</value>
+    <value>DELETE FROM Addresses WHERE AddressId = @ADDRESSID</value>
   </data>
-  <data name="Get" xml:space="preserve">
-    <value>SELECT TypeId AS TYPEID, Name AS NAME, Shortcut AS SHORTCUT FROM DocumentTypes</value>
+  <data name="GET" xml:space="preserve">
+    <value>SELECT 
+ AddressId AS ADDRESSID, 
+  City AS CITY, 
+  Country AS COUNTRY, 
+  Street AS STREET, 
+  Number AS NUMBER, 
+  FlatNumber AS FLATNUMBER, 
+  PostCode AS POSTCODE 
+FROM 
+  Addresses</value>
   </data>
   <data name="GetById" xml:space="preserve">
-    <value>SELECT * FROM DocumentTypes WHERE TypeId = @TYPEID</value>
+    <value>SELECT 
+ AddressId AS ADDRESSID, 
+  City AS CITY, 
+  Country AS COUNTRY, 
+  Street AS STREET, 
+  Number AS NUMBER, 
+  FlatNumber AS FLATNUMBER, 
+  PostCode AS POSTCODE 
+FROM 
+  Addresses 
+WHERE 
+  AddressId = @ADDRESSID</value>
   </data>
   <data name="Update" xml:space="preserve">
-    <value>UPDATE DocumentTypes SET Name = @NAME, Shortcut = @SHORTCUT WHERE TypeId = @TYPEID</value>
+    <value>UPDATE 
+  Addresses 
+SET 
+  City = @CITY, 
+  Country = @COUNTRY, 
+  Street = @STREET, 
+  Number = @NUMBER, 
+  FlatNumber = @FLATNUMBER, 
+  PostCode = @POSTCODE 
+WHERE 
+  AddressId = AddressId</value>
   </data>
 </root>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
+namespace InvoiceApp.Server.Repositories.MSSql.Queries.MeasureUnit {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class DocumentTypeQueries {
+    internal class MeasureUnitQueries {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal DocumentTypeQueries() {
+        internal MeasureUnitQueries() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType.DocumentTypeQueries", typeof(DocumentTypeQueries).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("InvoiceApp.Server.Repositories.MSSql.Queries.MeasureUnit.MeasureUnitQueries", typeof(MeasureUnitQueries).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,9 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO DocumentTypes (Name, Shortcut) VALUES (@NAME, @SHORTCUT).
+        ///   Looks up a localized string similar to INSERT INTO MeasureUnits (Name, Shortcut) 
+        ///VALUES 
+        ///  (@NAME, @SHORTCUT).
         /// </summary>
         internal static string Create {
             get {
@@ -70,7 +72,10 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DELETE FROM DocumentTypes WHERE TypeId = @TYPEID.
+        ///   Looks up a localized string similar to DELETE FROM 
+        ///  MeasureUnits 
+        ///WHERE 
+        ///  MeasureUnitId = @MEASUREUNITID.
         /// </summary>
         internal static string Delete {
             get {
@@ -79,7 +84,12 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT TypeId AS TYPEID, Name AS NAME, Shortcut AS SHORTCUT FROM DocumentTypes.
+        ///   Looks up a localized string similar to SELECT 
+        ///  MeasureUnitId AS MEASUREUNITID, 
+        ///  Name AS NAME, 
+        ///  Shortcut AS SHORTCUT 
+        ///FROM 
+        ///  MeasureUnits.
         /// </summary>
         internal static string Get {
             get {
@@ -88,7 +98,14 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT * FROM DocumentTypes WHERE TypeId = @TYPEID.
+        ///   Looks up a localized string similar to SELECT 
+        ///  MeasureUnitId AS MEASUREUNITID, 
+        ///  Name AS NAME, 
+        ///  Shortcut AS SHORTCUT 
+        ///FROM 
+        ///  MeasureUnits 
+        ///WHERE 
+        ///  MeasureUnitId = @MEASUREUNITID.
         /// </summary>
         internal static string GetById {
             get {
@@ -97,7 +114,13 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UPDATE DocumentTypes SET Name = @NAME, Shortcut = @SHORTCUT WHERE TypeId = @TYPEID.
+        ///   Looks up a localized string similar to UPDATE 
+        ///  MeasureUnits 
+        ///SET 
+        ///  Name = @NAME, 
+        ///  Shortcut = @SHORTCUT 
+        ///WHERE 
+        ///  MeasureUnitId = @MEASUREUNITID.
         /// </summary>
         internal static string Update {
             get {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
+namespace InvoiceApp.Server.Repositories.MSSql.Queries.Address {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class DocumentTypeQueries {
+    internal class AddressQueries {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal DocumentTypeQueries() {
+        internal AddressQueries() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType.DocumentTypeQueries", typeof(DocumentTypeQueries).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("InvoiceApp.Server.Repositories.MSSql.Queries.Address.AddressQueries", typeof(AddressQueries).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,8 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO DocumentTypes (Name, Shortcut) VALUES (@NAME, @SHORTCUT).
+        ///   Looks up a localized string similar to INSERT INTO Addresses (City, Country, Street, Number, FlatNumber, PostCode)
+        ///	VALUES (@CITY, @COUNTRY, @STREET, @NUMBER, @FLATNUMBER, @POSTCODE).
         /// </summary>
         internal static string Create {
             get {
@@ -70,7 +71,7 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DELETE FROM DocumentTypes WHERE TypeId = @TYPEID.
+        ///   Looks up a localized string similar to DELETE FROM Addresses WHERE AddressId = @ADDRESSID.
         /// </summary>
         internal static string Delete {
             get {
@@ -79,16 +80,36 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT TypeId AS TYPEID, Name AS NAME, Shortcut AS SHORTCUT FROM DocumentTypes.
+        ///   Looks up a localized string similar to SELECT 
+        /// AddressId AS ADDRESSID, 
+        ///  City AS CITY, 
+        ///  Country AS COUNTRY, 
+        ///  Street AS STREET, 
+        ///  Number AS NUMBER, 
+        ///  FlatNumber AS FLATNUMBER, 
+        ///  PostCode AS POSTCODE 
+        ///FROM 
+        ///  Addresses.
         /// </summary>
-        internal static string Get {
+        internal static string GET {
             get {
-                return ResourceManager.GetString("Get", resourceCulture);
+                return ResourceManager.GetString("GET", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT * FROM DocumentTypes WHERE TypeId = @TYPEID.
+        ///   Looks up a localized string similar to SELECT 
+        /// AddressId AS ADDRESSID, 
+        ///  City AS CITY, 
+        ///  Country AS COUNTRY, 
+        ///  Street AS STREET, 
+        ///  Number AS NUMBER, 
+        ///  FlatNumber AS FLATNUMBER, 
+        ///  PostCode AS POSTCODE 
+        ///FROM 
+        ///  Addresses 
+        ///WHERE 
+        ///  AddressId = @ADDRESSID.
         /// </summary>
         internal static string GetById {
             get {
@@ -97,7 +118,17 @@ namespace InvoiceApp.Server.Repositories.MSSql.Queries.DocumentType {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UPDATE DocumentTypes SET Name = @NAME, Shortcut = @SHORTCUT WHERE TypeId = @TYPEID.
+        ///   Looks up a localized string similar to UPDATE 
+        ///  Addresses 
+        ///SET 
+        ///  City = @CITY, 
+        ///  Country = @COUNTRY, 
+        ///  Street = @STREET, 
+        ///  Number = @NUMBER, 
+        ///  FlatNumber = @FLATNUMBER, 
+        ///  PostCode = @POSTCODE 
+        ///WHERE 
+        ///  AddressId = AddressId.
         /// </summary>
         internal static string Update {
             get {

@@ -118,18 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Create" xml:space="preserve">
-    <value>INSERT INTO DocumentTypes (Name, Shortcut) VALUES (@NAME, @SHORTCUT)</value>
+    <value>INSERT INTO MeasureUnits (Name, Shortcut) 
+VALUES 
+  (@NAME, @SHORTCUT)</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>DELETE FROM DocumentTypes WHERE TypeId = @TYPEID</value>
+    <value>DELETE FROM 
+  MeasureUnits 
+WHERE 
+  MeasureUnitId = @MEASUREUNITID</value>
   </data>
   <data name="Get" xml:space="preserve">
-    <value>SELECT TypeId AS TYPEID, Name AS NAME, Shortcut AS SHORTCUT FROM DocumentTypes</value>
+    <value>SELECT 
+  MeasureUnitId AS MEASUREUNITID, 
+  Name AS NAME, 
+  Shortcut AS SHORTCUT 
+FROM 
+  MeasureUnits</value>
   </data>
   <data name="GetById" xml:space="preserve">
-    <value>SELECT * FROM DocumentTypes WHERE TypeId = @TYPEID</value>
+    <value>SELECT 
+  MeasureUnitId AS MEASUREUNITID, 
+  Name AS NAME, 
+  Shortcut AS SHORTCUT 
+FROM 
+  MeasureUnits 
+WHERE 
+  MeasureUnitId = @MEASUREUNITID</value>
   </data>
   <data name="Update" xml:space="preserve">
-    <value>UPDATE DocumentTypes SET Name = @NAME, Shortcut = @SHORTCUT WHERE TypeId = @TYPEID</value>
+    <value>UPDATE 
+  MeasureUnits 
+SET 
+  Name = @NAME, 
+  Shortcut = @SHORTCUT 
+WHERE 
+  MeasureUnitId = @MEASUREUNITID</value>
   </data>
 </root>
