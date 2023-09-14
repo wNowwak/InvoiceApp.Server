@@ -1,19 +1,32 @@
 ﻿using AutoFixture;
 using InvoiceApp.Commons.Models;
 using InvoiceApp.Server.Repositories.MSSql;
+using Microsoft.Extensions.Hosting;
+using InvoiceApp.Server.Extensions;
+using InvoiceApp.Server.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
-var repo = new MSSQLMeasureUnitRepository();
+internal class Program
+{
+    private static async Task Main(string[] args)
+    {
+        var builder = Host.CreateApplicationBuilder(args);
+        //builder.Services.AddDependenciesForMSSQL();
+        builder.Services.AddDependenciesForEF();
+        var app = builder.Build();
 
-var address = new MeasureUnit();
-var fixture = new Fixture();
-//for (int i = 0; i < 100; i++)
-//{
-    address = fixture.Create<MeasureUnit>();
-//    await repo.CreateAddress(address);
-//}
-address.MeasureUnitId = 1;
+        var repo = app.Services.GetService<IAddressRepository>();
 
-//await repo.DeleteAddress(3);
-//await repo.GetAddressesAsync();
-await repo.DeleteMeasureUnit(1);
+        var address = new Address();
+        var fixture = new Fixture();
+        //for (int i = 0; i < 100; i++)
+        //{
+        address = fixture.Build<Address>().Without(_ => _.AddressId).Create<Address>();
+        //    await repo.CreateAddress(address);
+        //}
+        address.AddressId = 2;
+        //var result = await repo.UpdateAddress(address);
+        //app.Run();
+    }
+}
 //await repo.GetDocumentTypesAsync();
